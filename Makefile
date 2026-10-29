@@ -1,9 +1,10 @@
 #
-#  Note: You must run ./setcookie before running make.
+#  Note: You student must run ./setcookie before running make.
 #
 
 CC := gcc
-CFLAGS := -w -m32 -static -U_FORTIFY_SOURCE -fno-pie -DCOOKIE=$(shell cat cookie) -g
+CFLAGS := -w -m32 -static -U_FORTIFY_SOURCE -fno-pie -DCOOKIE=$(COOKIE) -g
+CFLAGS += -std=gnu89
 LDFLAGS :=
 LDLIBS :=
 
